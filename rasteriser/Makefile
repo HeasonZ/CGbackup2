@@ -10,14 +10,14 @@ B_DIR=Build
 EXEC=$(B_DIR)/$(FILE)
 
 # default build settings
-CC_OPTS=-c -pipe -Wall -Wno-switch -ggdb -g3 
+CC_OPTS=-c -pipe -Wall -Wno-switch -ggdb -g3 -std=c++11
 LN_OPTS=
-CC=g++
+CC=g++ 
 
 ########
 #       SDL options
 SDL_CFLAGS := $(shell sdl2-config --cflags)
-GLM_CFLAGS := -I$(GLMDIR)
+GLM_CFLAGS := -I../glm/
 SDL_LDFLAGS := $(shell sdl2-config --libs)
 
 ########
